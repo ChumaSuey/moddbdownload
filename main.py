@@ -19,7 +19,7 @@ search_bar.send_keys("Dark-Life 2")
 search_bar.submit()
 
 # go to the Dark-Life 2 page
-darklife_link = driver.find_element_by_xpath("//a[contains(@href,'dark-life-2')]")
+darklife_link = driver.find_element(By.XPATH,"//a[contains(text(),'dark life 2 mod for')]")
 darklife_link.click()
 
 # go to the Files section
