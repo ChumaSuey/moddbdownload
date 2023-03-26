@@ -19,6 +19,10 @@ search_bar.send_keys("Dark-Life 2")
 search_bar.submit()
 
 # go to the Dark-Life 2 page
+# Indev Chuma estas lineas
+#WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "select#Vorig_station"))).click()
+#select = Select(WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "select#Vorig_station"))))
+
 darklife_link = driver.find_element(By.XPATH,"//a[contains(text(),'dark life 2 mod for')]")
 darklife_link.click()
 
