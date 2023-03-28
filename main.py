@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.wait import WebDriverWait
 import urllib.request
 
 dp="chromedriver"
@@ -18,22 +19,22 @@ search_bar = driver.find_element(By.ID,'sitesearch')  #Corregido Chuma , era "si
 search_bar.send_keys("Dark-Life 2")
 search_bar.submit()
 
-# go to the Dark-Life 2 page
-# Indev Chuma estas lineas
-#WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "select#Vorig_station"))).click()
-#select = Select(WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "select#Vorig_station"))))
 
-darklife_link = driver.find_element(By.XPATH,"//a[contains(text(),'dark life 2 mod for')]")
+
+darklife_link = driver.find_element(By.XPATH,"//a[text(),'dark-life 2 mod for']")
 darklife_link.click()
 
 # go to the Files section
-files_link = driver.find_element_by_xpath("//a[contains(@href,'files')]")
+files_link = driver.find_element(By.XPATH,"//a[contains(@href,'files')]")
 files_link.click()
 
 # download the demo file
-demo_link = driver.find_element_by_xpath("//a[contains(@href,'dark-life-2-demo')]")
+demo_link = driver.find_element(By.XPATH,"//a[contains(@href,'dark-life-2-demo')]")
 demo_url = demo_link.get_attribute("href")
-urllib.request.urlretrieve(demo_url, "DarkLife2Demo.zip")
+urllib.request.urlretrieve(demo_url,r"C:\Users\luism\Downloads\DarkLife2Demo.zip")
+# Template download link
+#urllib.request.urlretrieve(demo_url,"DarkLife2Demo.zip")
+
 
 # close the webdriver
 driver.quit()
@@ -47,3 +48,9 @@ driver.quit()
 #Copy code
 #urllib.request.urlretrieve(demo_url, r"C:\Users\luism\Downloads\DarkLife2Demo.zip")
 #This will save the downloaded file to the specified path on your system.
+
+
+# go to the Dark-Life 2 page
+# Indev Chuma estas lineas
+#WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, "select#suggest_search"))).click()
+#select = Select(WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, "select#suggest_search"))))
