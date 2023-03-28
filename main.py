@@ -21,7 +21,7 @@ search_bar.submit()
 
 
 
-darklife_link = driver.find_element(By.XPATH,"//a[text(),'dark-life 2 mod for']")
+darklife_link = driver.find_element(By.XPATH,"//a[text(),'dark-life 2 mod for']") #En esta parte el script deberia acceder a la pagina, no lo hace, y para mi el XPath parcial esta bien, ya lo hice con contain y sin contain y nada , check pls ily
 darklife_link.click()
 
 # go to the Files section
