@@ -27,6 +27,7 @@ for w in chwd:
         driver.switch_to.window(w)
 get_url = driver.current_url
 print("The current url is:"+str(get_url))
+#This is just a "failsafe" to verify the current url the bot is going through.
 darklife_link3 = driver.find_element(By.XPATH, "//a[contains(normalize-space(), 'Download now')]")
 darklife_link3.click()
 
