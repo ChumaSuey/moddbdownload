@@ -34,3 +34,14 @@ darklife_link3.click()
 
 # This process of window handle must be done because moddb open different tabs.
 # On changing window handle and finding download and clicking it, the file will download itself.
+
+
+#As a template if you want to try with another mod is
+# Step one : get in moddb.
+# Step two : set up the name of the mod and send it through the keys , then click.
+# Step three : be aware of new windows to do the new window handle.
+# Step four : Click on your desired mod
+# Step five and hopefully final : Set up the calls to download it and click it
+
+# I think from the deplegable button / menu of the main website it can be done for sure.
+# But we decided to do it this way.
